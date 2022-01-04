@@ -19,4 +19,6 @@ class ObraRepository {
         obrasById[entity.id] = entity
         return entity
     }
+
+    fun listAll(): List<ObraEntity> = obrasById.values.toList()
 }

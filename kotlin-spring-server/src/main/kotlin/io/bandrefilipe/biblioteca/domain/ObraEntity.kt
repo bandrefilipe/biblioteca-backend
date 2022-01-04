@@ -6,4 +6,12 @@ data class ObraEntity(
     val editora: String,
     val foto: String,
     val autores: List<String>,
-)
+) {
+    constructor(id: Int, values: ObraVO) : this(
+        id = id,
+        titulo = values.titulo,
+        editora = values.editora,
+        foto = values.foto,
+        autores = values.autores,
+    )
+}

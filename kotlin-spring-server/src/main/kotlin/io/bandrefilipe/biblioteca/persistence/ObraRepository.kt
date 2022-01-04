@@ -23,4 +23,6 @@ class ObraRepository {
     fun listAll(): List<ObraEntity> = obrasById.values.toList()
 
     fun remove(id: Int): ObraEntity? = obrasById.remove(id)
+
+    fun update(id: Int, values: ObraVO): ObraEntity? = obrasById.replace(id, ObraEntity(id, values))
 }

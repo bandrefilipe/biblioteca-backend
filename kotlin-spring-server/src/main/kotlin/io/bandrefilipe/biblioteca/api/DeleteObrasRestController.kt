@@ -19,7 +19,7 @@ class DeleteObrasRestController(
         }
         return when (removedObra) {
             null -> ResponseEntity.notFound().build()
-            else -> ResponseEntity.noContent().build()
+            else -> ResponseEntity.ok().build()
         }
     }
 
